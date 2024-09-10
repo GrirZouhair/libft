@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/08 14:28:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/08 14:28:37 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/10 15:13:27 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/10 15:13:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isalnum(int c)
+#include <stdio.h>
+size_t ft_strlen(const char *s)
 {
-    if (ft_isdigit(c) || ft_isalpha(c))
-        return (1);
-    return (0);
+    size_t index;
+
+    index = 0;
+    while (s[index])
+    {
+        index++;
+    }
+    return (index);
+}
+int main(void)
+{
+    const char *test_str = "Hello, world!";
+    size_t length;
+
+    length = ft_strlen(test_str);
+    printf("The length of the string \"%s\" is %zu.\n", test_str, length);
+
+    return 0;
 }
