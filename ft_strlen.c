@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+==>     The length of a string can never be negative, so using an unsigned type (size_t) is appropriate.
+==>     strlen could return very large values on systems with lots of memory, so using size_t ensures that the function can handle large strings.
+*/
 #include "libft.h"
 #include <stdio.h>
 size_t ft_strlen(const char *s)
@@ -22,14 +26,4 @@ size_t ft_strlen(const char *s)
         index++;
     }
     return (index);
-}
-int main(void)
-{
-    const char *test_str = "Hello, world!";
-    size_t length;
-
-    length = ft_strlen(test_str);
-    printf("The length of the string \"%s\" is %zu.\n", test_str, length);
-
-    return 0;
 }

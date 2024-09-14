@@ -9,11 +9,11 @@
 /*   Updated: 2024/09/08 14:28:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+gcc -Wall -Wextra -Werror ft_isalnum.c ft_isdigit.c ft_isalpha.c -o test_program
+*/
 #include "libft.h"
 int ft_isalnum(int c)
 {
-    if (ft_isdigit(c) || ft_isalpha(c))
-        return (1);
-    return (0);
+    return (ft_isdigit(c) || ft_isalpha(c));
 }

@@ -12,16 +12,12 @@
 
 int ft_lowercase(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (1);
-    return (0);
+    return (c >= 'A' && c <= 'Z');
 }
 
 int ft_uppercase(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (1);
-    return (0);
+    return (c >= 'a' && c <= 'z');
 }
 
 int ft_isalpha(int c)
