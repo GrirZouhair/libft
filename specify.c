@@ -14,3 +14,10 @@ unsigned char *: You are converting the (void * )pointer b to a pointer to unsig
 This tells the compiler that b should now be treated as a pointer to a series of bytes (unsigned char),
 allowing you to manipulate the memory at the byte level.
 */
+
+/*
+When you use (unsigned char *)b, you are converting the type of the pointer b from a void * (generic pointer) to an unsigned char * (pointer to an unsigned char).
+*/
+/*
+ arrays in C are zero-indexed, meaning the valid indices are from 0 to len - 1. Accessing str[len] results in writing past the end of the memory block.
+*/

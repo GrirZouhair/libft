@@ -31,6 +31,7 @@ void *ft_memset(void *b, int c, size_t len)
     unsigned char *i;
 
     i = (unsigned char *)b;
+    // The <<i>> pointer will now point to the same memory location but can be used to manipulate it byte by byte.
     while (len > 0)
     {
         *i = (unsigned char)c; // Cast `c` to `unsigned char`
