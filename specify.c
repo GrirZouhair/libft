@@ -21,3 +21,6 @@ When you use (unsigned char *)b, you are converting the type of the pointer b fr
 /*
  arrays in C are zero-indexed, meaning the valid indices are from 0 to len - 1. Accessing str[len] results in writing past the end of the memory block.
 */
+/*
+const char *. This ensures that the function can read the string but cannot change it.
+*/

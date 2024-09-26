@@ -26,6 +26,7 @@ This function is useful for initializing or resetting data in memory, like filli
 
 #include "libft.h"
 #include <stdio.h>
+/*
 void *ft_memset(void *b, int c, size_t len)
 {
     unsigned char *i;
@@ -37,6 +38,18 @@ void *ft_memset(void *b, int c, size_t len)
         *i = (unsigned char)c; // Cast `c` to `unsigned char`
         len--;
         i++;
+    }
+    return (b);
+}
+*/
+void *ft_memset(void *b, int c, size_t len)
+{
+    unsigned char *str;
+    str = (unsigned char *)b;
+    while (len > 0)
+    {
+        str[len - 1] = (unsigned char)c;
+        len--;
     }
     return (b);
 }

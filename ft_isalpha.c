@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_lowercase(int c)
+int ft_uppercase(int c)
 {
     return (c >= 'A' && c <= 'Z');
 }
 
-int ft_uppercase(int c)
+int ft_lowercase(int c)
 {
     return (c >= 'a' && c <= 'z');
 }
