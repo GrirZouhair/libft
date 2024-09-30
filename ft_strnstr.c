@@ -10,17 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The reason for casting haystack to (char *) is because the return type of the function ft_strnstr is char *.
-Even though haystack is declared as const char *, the function needs to return a char *.
-
-If you return haystack directly (without the cast), it will try to return a const char *, but the function signature expects a char *.
-*/
 #include "libft.h"
 #include <stdio.h>
-/*
-Why (char *): The (char *) cast is necessary because haystack is declared as const char * (meaning a pointer to a constant character), but the function returns a char * (a pointer to a non-const character). The cast ensures the function returns the correct type (char *), even though you're casting away the const qualifier.
-*/
+
 char *ft_strnstr(const char *haystack, const char *needle, int n)
 {
     int i;

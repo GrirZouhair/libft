@@ -14,7 +14,7 @@ ft_memcpy is a function that copies a specified number of bytes from a source me
 to a destination memory area
 */
 #include "libft.h"
-
+// src is treated as read-only (const), while dst is modified to store the copied data.
 void *ft_memcpy(void *dst, const void *src, size_t n)
 {
     unsigned char *destination;
@@ -36,18 +36,18 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
     }
     return (dst);
 }
-// #include <stdio.h>
-// int main()
-// {
-//     char arr1[] = {1, 2, 3}; // Corrected array declaration
-//     char arr2[3];            // Allocate space for the destination array
+#include <stdio.h>
+int main()
+{
+    char arr1[] = {1, 2, 3};  // Corrected array declaration
+    char arr2[3] = {9, 9, 9}; // Allocate space for the destination array
 
-//     ft_memcpy(arr2, arr1, 3); // Correctly call ft_memcpy
+    ft_memcpy(arr2, arr1, 3); // Correctly call ft_memcpy
 
-//     for (int i = 0; i < 3; i++)
-//     {
-//         printf("arr2[%d] = %d\n", i, arr2[i]); // Corrected printf format
-//     }
+    for (int i = 0; i < 3; i++)
+    {
+        printf("arr2[%d] = %d\n", i, arr2[i]); // Corrected printf format
+    }
 
-//     return 0;
-// }
+    return 0;
+}

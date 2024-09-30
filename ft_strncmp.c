@@ -9,12 +9,7 @@
 /*   Updated: 2024/09/24 12:29:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-Character Representation:
 
-    The C standard allows the char type to be either signed or unsigned, depending on the compiler and architecture.
-    If a char is signed, it can hold negative values (typically from -128 to 127), while an unsigned char holds values from 0 to 255.
-*/
 #include "libft.h"
 #include <stdio.h>
 /*
