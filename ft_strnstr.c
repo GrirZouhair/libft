@@ -22,7 +22,7 @@ char *ft_strnstr(const char *haystack, const char *needle, int n)
     i = 0;
     j = 0;
     st_len = ft_strlen(needle);
-    if (needle[i] == '\0' || needle == haystack)
+    if (!needle || needle == haystack)
         return ((char *)(haystack));
     if (!haystack && !needle)
         return (0);
@@ -43,7 +43,7 @@ char *ft_strnstr(const char *haystack, const char *needle, int n)
 int main(void)
 {
     const char *haystack = "welcome to 42!";
-    const char *needle = "e";
+    const char *needle = "l";
     int n = 12;
 
     printf("%s", ft_strnstr(haystack, needle, n));

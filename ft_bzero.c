@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+==>In ft_memset, returning the pointer allows the caller to use the modified memory directly if needed
+(for passing the pointer to another function).
+
+
+==>In ft_bzero, since it only zeroes out the memory, there’s no additional utility in returning the pointer,
+so it simply returns void.
+*/
+
 #include "libft.h"
 #include <stdio.h>
 
