@@ -26,16 +26,11 @@ char *ft_strchr(const char *s, int c)
         }
         i++;
     }
-    if (s[i] == ca)
-    {
-        return ((char *)(s + i));
-    }
-
     return (NULL);
 }
 int main()
 {
-    const char *string = "zouhairgrir";
-    char ch = 'r';
+    const char *string = "abc";
+    char ch = 'b';
     printf("%s", ft_strchr(string, ch));
 }

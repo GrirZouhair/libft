@@ -40,8 +40,8 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 int main()
 {
     char destination[] = "hello";
-    char source[] = " world!";
-    int size = 3;
+    char source[] = "world!";
+    int size = 6;
     printf("%d\n", ft_strlcat(destination, source, size));
     printf("%s", destination);
 }

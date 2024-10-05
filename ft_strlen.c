@@ -27,3 +27,8 @@ size_t ft_strlen(const char *s)
     }
     return (index);
 }
+// int main()
+// {
+//     const char d[] = "Hello";
+//     printf("the result is : %d", ft_strlen(d));
+// }

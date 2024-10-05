@@ -19,7 +19,7 @@ char *ft_strrchr(const char *s, int c)
 
     len = ft_strlen(s);
     ca = (unsigned char)c;
-    while (len > 0)
+    while (len >= 0)
     {
         if (s[len] == ca)
         {
@@ -32,8 +32,8 @@ char *ft_strrchr(const char *s, int c)
 
 int main()
 {
-    const char *str = "Hello, world!";
-    char ch = 'o';
+    const char *str = "Hello";
+    char ch = 'H';
     printf("%s", ft_strrchr(str, ch));
 
     return 0;

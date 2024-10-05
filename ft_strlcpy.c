@@ -21,7 +21,7 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 
     if (size > 0) // when size==1, only add a null teminator to dest
     {
-        while (src[i] && i < size - 1)
+        while (src[i] && i < size - 1) // src[i] to ignore loop fir the whole size
         {
             dest[i] = src[i];
             i++;
@@ -34,9 +34,9 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 #include <stdio.h>
 int main()
 {
-    char source[] = "defgh";
+    char source[] = "defg";
     char destination[20] = "abc";
-    int size = 2;
+    int size = 12;
     printf("%d\n", ft_strlcpy(destination, source, size));
     printf("%s", destination);
 }
