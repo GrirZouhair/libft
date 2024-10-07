@@ -9,10 +9,11 @@
 /*   Updated: 2024/10/06 13:49:22 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 static char *ft_char(char *s, unsigned int number, long int len)
 {
-    while (number > 0)
+    while (len > 0)
     {
         s[len - 1] = (number % 10) + '0'; // int to char
         number /= 10;
@@ -30,7 +31,7 @@ static int ft_len(int n)
     {
         len++;
     }
-    while (n != 0) // 210 / 10  | n ==> 32 | len ==> 1 | n still true
+    while (n != 0) // we dont have need to the each of numbers just number of digit
     {
         n /= 10;
         len++;

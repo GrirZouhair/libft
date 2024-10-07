@@ -49,7 +49,7 @@ void *ft_memset(void *b, int c, size_t len)
     str = (unsigned char *)b;
     while (len > 0)
     {
-        str[len - 1] = (unsigned char)c;
+        str[len - 1] = (unsigned char)c; // we affected char that's why use %c
         len--;
     }
     return (b);

@@ -28,7 +28,7 @@ void ft_bzero(void *b, size_t len)
     str = (unsigned char *)b;
     while (len > 0)
     {
-        str[len - 1] = 0;
+        str[len - 1] = 0; // we affected digit that's why use %d
         len--;
     }
 }
