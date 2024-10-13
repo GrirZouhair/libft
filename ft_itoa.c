@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-static char *ft_char(char *s, unsigned int number, long int len)
+static char *ft_char(char *s, unsigned int number, long int len, int is_negative)
 {
     while (len > 0)
     {
@@ -19,6 +19,11 @@ static char *ft_char(char *s, unsigned int number, long int len)
         number /= 10;
         len--;
     }
+    if (is_negative)
+    {
+        s[0] = '-';
+    }
+
     return (s);
 }
 
@@ -45,6 +50,7 @@ char *ft_itoa(int n)
     char *s;
     unsigned int number;
     long int len;
+    int is_negative = 0;
 
     len = ft_len(n);
     s = (char *)malloc(len + 1);
@@ -56,24 +62,25 @@ char *ft_itoa(int n)
     if (n == 0)
     {
         s[0] = '0';
+        return (s); // Early return to avoid calling ft_char unnecessarily
     }
-    else if (n < 0)
+    if (n < 0)
     {
-        number = n * -1;
-        s[0] = '-';
+        number = -n;
+        is_negative = 1;
     }
     else
     {
         number = n;
     }
-    s = ft_char(s, number, len);
+    s = ft_char(s, number, len, is_negative);
     return (s);
 }
 #include <stdio.h>
 
 int main()
 {
-    int number = 2345;
+    int number = -12;
     char *result = ft_itoa(number);
     printf("Converted number: %s\n", result);
     free(result);

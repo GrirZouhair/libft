@@ -30,11 +30,10 @@ char *ft_strrchr(const char *s, int c)
     return (NULL);
 }
 
+#include <stdio.h>
 int main()
 {
-    const char *str = "Hello";
-    char ch = 'H';
-    printf("%s", ft_strrchr(str, ch));
-
-    return 0;
+    const char string[] = "abcdaf";
+    int c = 'a';
+    printf("%s", ft_strrchr(string, c));
 }
