@@ -41,7 +41,7 @@ int main()
 {
     char destination[] = "hello";
     char source[] = "world!";
-    int size = 6;
+    int size = 4;
     printf("%d\n", ft_strlcat(destination, source, size));
     printf("%s", destination);
 }

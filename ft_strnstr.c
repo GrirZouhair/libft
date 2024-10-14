@@ -43,7 +43,7 @@ char *ft_strnstr(const char *haystack, const char *needle, int n)
 int main(void)
 {
     const char *haystack = "welcome to 42!";
-    const char *needle = "l";
+    const char *needle = "lc";
     int n = 12;
 
     printf("%s", ft_strnstr(haystack, needle, n));

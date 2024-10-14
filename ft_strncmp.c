@@ -64,7 +64,7 @@ int ft_strncmp(const char *s1, const char *s2, int n)
 int main()
 {
     const char *str1 = "heb";
-    const char *str2 = "hea";
+    const char *str2 = "hey";
     // Compare identical strings
     printf("Comparing str1 and str2: %d\n", ft_strncmp(str1, str2, 3)); // Should return 0
 }
