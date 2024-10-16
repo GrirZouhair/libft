@@ -21,7 +21,7 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 
     if (size > 0) // when size==1, only add a null teminator to dest
     {
-        while (src[i] && i < size - 1) // src[i] to ignore loop for the whole size
+        while (src[i] && i < size - 1) // src[i] to ignore loop for the whole size && exclude "\0"
         {
             dest[i] = src[i];
             i++;
