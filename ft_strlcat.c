@@ -39,9 +39,9 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 
 int main()
 {
-    char destination[] = "hello";
+    char destination[] = "abc";
     char source[] = "world!";
-    int size = 4;
-    printf("%d\n", ft_strlcat(destination, source, size));
+    int size = 20;
+    printf("%d\n", ft_strlcat(destination, source, ft_strlen(source)));
     printf("%s", destination);
 }

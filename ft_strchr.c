@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-
+// You’re not "changing" s itself, only returning a pointer to a position in s. This is why const is used.
 char *ft_strchr(const char *s, int c)
 {
     int i = 0;
@@ -28,9 +28,9 @@ char *ft_strchr(const char *s, int c)
     }
     return (NULL);
 }
-int main()
-{
-    const char *string = "abc";
-    char ch = 'b';
-    printf("%s", ft_strchr(string, ch));
-}
+// int main()
+// {
+//     const char *string = "abc";
+//     char ch = 'b';
+//     printf("%s", ft_strchr(string, ch));
+// }

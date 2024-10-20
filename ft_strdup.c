@@ -26,17 +26,3 @@ char *ft_strdup(const char *s)
     dest[size] = '\0';
     return (dest);
 }
-int main()
-{
-    char *duplicate;
-    const char *original = "Hello, World!";
-
-    duplicate = ft_strdup(original);
-    if (duplicate)
-    {
-        printf("%s\n", duplicate); // Print the duplicated string
-        free(duplicate);           // Free allocated memory
-    }
-
-    return 0;
-}

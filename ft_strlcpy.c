@@ -30,13 +30,3 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
     }
     return (len);
 }
-
-#include <stdio.h>
-int main()
-{
-    char source[] = "defg";
-    char destination[20] = "abc";
-    int size = 20;
-    printf("%d\n", ft_strlcpy(destination, source, size));
-    printf("%s", destination);
-}

@@ -32,7 +32,6 @@ void ft_bzero(void *b, size_t len)
         str[len - 1] = 0; // we affected digit that's why use %d
         len--;
     }
-    str[len] = 0;
 }
 
 int main()
