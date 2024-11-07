@@ -3,6 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+<<<<<<< HEAD
 /*   By: zogrir <zogrir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:25:34 by zogrir            #+#    #+#             */
@@ -33,3 +34,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+=======
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/27 11:43:59 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/27 11:43:59 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+}
+>>>>>>> ed238d4ed10b61964a75d7d35c105c9d162681f7
