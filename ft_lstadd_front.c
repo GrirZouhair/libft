@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zogrir <zogrir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 10:17:44 by zogrir            #+#    #+#             */
-/*   Updated: 2024/10/22 10:21:26 by zogrir           ###   ########.fr       */
+/*   Created: 2024/11/08 14:37:24 by zogrir            #+#    #+#             */
+/*   Updated: 2024/11/13 17:48:02 by zogrir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if (!new)
+		return ;
+	if (*lst)
 	{
-		return (1);
+		new->next = *lst;
+		*lst = new;
 	}
-	return (0);
+	else
+	{
+		*lst = new;
+	}
 }
