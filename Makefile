@@ -6,11 +6,11 @@
 #    By: zogrir <zogrir@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 17:11:35 by zogrir            #+#    #+#              #
-#    Updated: 2024/11/13 18:06:15 by zogrir           ###   ########.fr        #
+#    Updated: 2024/11/14 19:33:59 by zogrir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isascii.c ft_isdigit.c \
 ft_isalpha.c ft_isalnum.c ft_isprint.c \
@@ -20,38 +20,29 @@ ft_strlcat.c ft_strdup.c ft_memcpy.c ft_memmove.c \
 ft_memcmp.c ft_calloc.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_strtrim.c ft_strjoin.c ft_strlcpy.c ft_memchr.c ft_substr.c ft_split.c ft_strmapi.c ft_striteri.c
 
-SRCBNS = ft_lstnew.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstadd_front.c
+SRCBONUS = ft_lstnew.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstadd_front.c
 
+OBJS = $(SRC:.c=.o)
 
-OBJS = ${SRC:.c=.o}
+OBJB = $(SRCBONUS:.c=.o)
 
-OBJBNS = ${SRCBNS:.c=.o}
+NAME = libft.a
 
-LIBC = ar -rcs
+all : $(NAME)
 
-CC = cc
+bonus : $(OBJB)
 
-FLAGS = -Wall -Wextra -Werror
-
-RM = rm -f
-
-all: ${NAME}
+$(NAME): $(OBJS)
 
 %.o: %.c libft.h
-	${CC} ${FLAGS} -c $< -o $@
-
-${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
-
-bonus: ${OBJBNS}
-	${LIBC} ${NAME} ${OBJBNS}
-
+	$(CC) $(CFLAGS) -c $< -o $@
+	ar -rc $(NAME) $@
 clean:
-	${RM} ${OBJS} ${OBJBNS}
+	rm -f $(OBJS) $(OBJB)
 
 fclean: clean
-	${RM} ${NAME}
+	rm -f $(NAME)
 
-re: fclean all
+re:    fclean all
 
-.PHONY: clean
+.PHONY: clean 
